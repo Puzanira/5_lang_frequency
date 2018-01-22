@@ -2,7 +2,7 @@ import sys
 from collections import Counter
 
 
-def load_data(filepath):
+def form_dictionary(filepath):
     dictionary = []
     with open(filepath, "r") as file:
         for line in file:
@@ -12,9 +12,9 @@ def load_data(filepath):
 
 def get_most_frequent_words(words):
     words_counter = Counter(words)
-    MAX_WORDS = 10
+    max_words = 10
     word_pairs = \
-        [(-pair[1], pair[0]) for pair in words_counter.most_common(MAX_WORDS)]
+        [(-pair[1], pair[0]) for pair in words_counter.most_common(max_words)]
     for i in sorted(word_pairs):
         print(i[0] * -1, i[1])
 
@@ -23,5 +23,5 @@ if __name__ == '__main__':
         print("Error: define file path")
         print("Usage example: python lang_frequency.py <path to file>")
     else:
-        words_list = load_data(sys.argv[1])
+        words_list = form_dictionary(sys.argv[1])
         get_most_frequent_words(words_list)
