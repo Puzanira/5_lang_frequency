@@ -4,11 +4,11 @@ import re
 
 
 def load_data(filepath):
-    file = open(filepath, 'r')
+    my_file = open(filepath, 'r')
     try:
-        text = file.read()
+        text = my_file.read()
     finally:
-        file.close()
+        my_file.close()
     all_words_list = re.findall(r"[\w']+", text)
     return all_words_list
 
