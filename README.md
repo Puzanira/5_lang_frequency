@@ -7,17 +7,15 @@
 2. Программа: разбивает текст на слова, подсчитывает их количество, сортирует по убыванию
 3. Выводит 10 строк в формате:
 ```
-(count, 'word')
-(количество, 'cлово') 
+количество слово 
 ```
 ### Пример вывода:
 ```
-(10, 'the')
-(7, 'and')
-(7, 'of')
-
+10 the
+7 of
+7 and
   .....
-(3, 'has')
+3 has
 
 ```
 
@@ -34,6 +32,6 @@ python lang_frequency.py <path to file> # может понадобиться в
 ```
 Запуск на Windows происходит аналогично.
 
-# Project Goals
+# Цели проекта
 
-The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+Код создан в учебных целях. В рамках учебного курса по веб-разработке - [DEVMAN.org](https://devman.org)
