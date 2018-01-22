@@ -1,6 +1,7 @@
 import sys
 import re
 from collections import Counter
+import os
 
 
 def load_data(filepath):
@@ -26,6 +27,9 @@ if __name__ == '__main__':
         print('Error: define file path')
         print('Usage example: python lang_frequency.py <path to file>')
     else:
-        text = load_data(sys.argv[1])
-        sorted_list = get_most_frequent_words(text)
-        print_words_list(sorted_list)
+        if os.path.isfile(sys.argv[1]):
+            text = load_data(sys.argv[1])
+            ten_most_common_words = get_most_frequent_words(text)
+            print_words_list(ten_most_common_words)
+        else:
+            print('Error: No such file in directory')
